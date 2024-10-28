@@ -41,7 +41,7 @@ def forecast(data, conf, periods, freq):
 
 
 # Read data from CSV
-data = pd.read_csv('./product_demand_data.csv')
+data = pd.read_csv('./data/product_demand_data.csv')
 data = data.dropna()
 data['Date'] = pd.to_datetime(data['Date'])
 data['Order_Demand'] = pd.to_numeric(data['Order_Demand'].str.extract('(\d+)').iloc[:, 0])
